@@ -18,3 +18,14 @@ This application can be used for downloading ZIP compressed log files in TXT for
 * Run the go file, and change set the flags if necessary.
 `go run main.go -directory=folder1/folder2 -filename=File.zip` or `go run main.go -directory folder1/folder2 -filename File.zip`
 * The CSV file will be saved in the output folder
+
+
+## Example
+First I set the variable values for connection to the FTP server by setting **ftpHost** for the hostname, **ftpUser** for the username and **ftpPassword** for the password.
+In the directory application/log I have a Zip File named Logfile-30-01-2020.zip. This Zip file contains one txt file names Logfile-30-01-2020.txt.
+
+I run the application on the 30th of January 2020, and because I have set the varible **filename** as `Logfile"+currentTime.Format("02")+"-"+currentTime.Format("01")+"-"+currentTime.Format("06")+".zip` the application will automatically set the current day. The logfiles are always located in the same directory, so i set **directory** as `application/log`.
+
+The txt file from the Zip file has now been extracted and saved as a CSV file in the output folder. I can now take this file and upload in my preferred Data Visualization tool.
+
+Everyday a new Zip file will be uploaded to the FTP server (following the date format I have set in **filenames**), so I just need to run the application everyday to get the logfiles.
