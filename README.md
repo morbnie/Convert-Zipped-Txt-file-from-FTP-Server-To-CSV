@@ -1,4 +1,4 @@
-# Convert-ZIPPED-TXT-file-from-FTP-Server-To-CSV
+# Convert-Zipped-Txt-file-from-FTP-Server-To-CSV
 This small Go application will download a ZIP compressed file from an FTP server. Every TXT files in this ZIP compressed file will be extraced and saved as CSV files.
 
 This application can be used for downloading ZIP compressed log files in TXT format from on an FTP Server. The TXT files will be extracted and saved as CSV files. These CSV files are then ready to be sent to visualization tool such as Tableau or Kibana/Elasticsearch (Elastic Stack). 
